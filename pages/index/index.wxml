@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="location">
+    <image src="/images/location.png" class="locaImg"/>
+    <span>当前位置：</span>{{city}}
+  </view>
+  <view class="header-wapper">
+    <view wx:for="{{product}}" bindtap="switchTab" wx:for-index="index" data-index="{{index}}">
+      <text class="text-detail {{curNav == index ? 'active' : ''}}">{{item.title}}</text>
+    </view>
+  </view>
+  <block wx:if="{{list.foodList == null}}">
+    <view class="wait-more">敬请期待...</view>
+  </block>
+  <block wx:if="{{list.foodList != null}}">
+    <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">    
+        <block wx:for="{{list.swiperImg}}" wx:for-index="index">    
+          <swiper-item>    
+            <image src="{{item}}" class="slide-image" mode="aspectFill"/>    
+          </swiper-item>    
+        </block>    
+      </swiper>  
+  <!--swiper end-->
+    
+    <view class="goods_list">
+      <ul class="goods_ul">
+        <li wx:for="{{list.foodList}}" class="item" bindtap="fooddetail">
+          <span data-id="{{item.foodid}}">
+            <image class="goods-images" src="{{item.url}}" ></image>
+              <p>{{item.foodname}}</p>
+              <p>￥{{item.foodprice}}</p>
+            </span>
+        </li>
+      </ul>
+    </view>
+  </block>
+</view>

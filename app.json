@@ -1,0 +1,39 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/my/my",
+    "pages/orders/orders",
+    "pages/goods/goods"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "林妈妈正宗手擀面",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh":true,
+    "backgroundTextStyle": "dark"    
+  },
+  "tabBar": {
+    "selectedColor":"#660000",
+    "color": "#333",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath":"/images/home.png",
+        "selectedIconPath": "/images/homeCheck.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "/images/my.png",
+        "selectedIconPath":"/images/myCheck.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

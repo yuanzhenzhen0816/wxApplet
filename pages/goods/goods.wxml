@@ -1,0 +1,80 @@
+<swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">    
+    <block wx:for="{{item.swiperImg}}" wx:for-index="index">    
+      <swiper-item>    
+        <image src="{{item}}" class="slide-image" mode="aspectFill"/>    
+      </swiper-item>    
+    </block>    
+</swiper>
+<view class="container">
+<view  class="column padd">
+  <text class="h3">{{item.foodname}}</text>
+  <text class="h5 gray">{{item.foodintroduce}}</text>
+</view>
+<view class="padd borderB">
+  <text class="h3 red">￥{{item.foodprice}}</text><text class="h5 dur gray">￥{{item.foodpriceold}}</text>
+</view>
+<view class="service row gray h5 padd borderB">
+  <ul>
+    <li>积分抵现</li>
+    <li>品质保障</li>
+    <li>正品保证</li>
+    <li>不支持7天无理由退换</li>
+  </ul>
+</view>
+<view class="row padd borderB bg-gray" bindtap="specifications">
+  <span>已选默认规格</span>
+  <image class="image-icon" src="/images/jiant.png"></image>
+</view>
+<view class="column padd">
+  <text class="red">林妈妈手擀面</text>
+  <text class="gray">北京老字号著名面食连锁品牌</text>
+</view>
+<text class="detail-title">商品评价</text>
+<view class="padd">
+  <text class=" red">综合评分{{valuatecon.score}}</text>
+  <view class="assess  borderB margin-t" wx:for="{{valuatecon.valuatecon}}"wx:for-index="index">
+    <span>{{item.username}}:{{item.iphone}}</span>
+    <text>{{item.evaluate}}</text>
+    <text>{{item.evaluatedate}}</text>
+  </view>
+ 
+</view>
+ <view class="allassess detail-title bg-gray">查看所有472条评价</view>
+<text class="detail-title">图文详情</text>
+<view class="deatil-img">
+  <image src="/images/20170329kv0.jpg"></image>
+  <image src="/images/jzp_kv.jpg"></image>
+  <image src="/images/icecream_kv.jpg"></image>
+</view>
+<view class="goodcar" wx:if="{{isshow}}">
+ <span class="close h3" bindtap="close">×</span>
+ <span class="rowf">
+  <image class="img-raduis" src="/images/1390444067_thumb.png"></image>
+  
+    <view class="column pad-left">
+      <p class="h3">{{item.foodname}}</p>
+      <p class="h5 red">￥{{havePrice}}</p>
+      <p class="h5 gray">已选择：{{haveCheckedProp}}</p>
+    </view>
+  </span> 
+  <view  class="rowf"  wx:for="{{item.property}}" wx:for-item="item">
+    <view class="classname">{{item.name}}</view>
+    <!--<button data-name="{{item.size}}" data-property="{{per.code}}" data-value="{{per.name}}" data-price="{{per.p}}"  bindtap="getChecked" wx:for="{{item.size}}" wx:for-item="per" class="{{per.name == postData[per.code]? 'active' : ''}}">{{per.name}}</button>-->
+   <button data-size="{{item.size}}" data-code="{{per.code}}" data-name="{{per.name}}" data-price="{{per.price}}"  bindtap="getChecked" wx:for="{{item.size}}" wx:for-item="per" class="{{per.name == postData.name? 'active' : ''}}">{{per.name}}</button>
+  </view>
+    
+  <text class="h5">购买数量</text>
+  <view class="rowf">
+   <text class="mt"> 总价：<text class="red">￥{{total}}</text></text>
+    <button class="del ic" bindtap="del" data-num="{{num}}">-</button>
+    <input type="text"  value="{{num}}" />         
+    <button class="add ic" bindtap="add" data-num="{{num}}">+</button>
+   
+  </view>
+
+</view>
+<view class="buy" bindtap="buy">
+ 立即订购
+</view>
+<view class="meng" wx:if="{{isshow}}"></view>
+</view>

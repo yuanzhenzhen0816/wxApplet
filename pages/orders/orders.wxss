@@ -1,0 +1,55 @@
+@import '../logs/logs.wxss';
+
+.payment {
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  width: 100%;
+  line-height: 40px;
+  height: 40px;
+  background: #f7f7f7;
+}
+
+.goumai {
+  line-height: 40px;
+  padding: 0 18px;
+  background: #f00;
+  color: #fff;
+  font-weight: 700;
+  margin: 0;
+  border-radius: 0;
+}
+
+.remarks-input {
+  width: 95%;
+  padding: 5px;
+  line-height: 20px;
+  height: 40px;
+}
+
+.white-bg {
+  background: #fff;
+  position: fixed;
+  bottom: 100px;
+  z-index: 150;
+  border-top: 1px solid #e3e3e3;
+  width: 100%;
+  zoom:1;
+  overflow: hidden
+}
+
+.pick {
+  text-align: center;
+  width: 100%;
+  height: 200px;
+  position: relative;
+  z-index: 105;
+  top: 0;
+}
+
+.monthClass {
+  width: 100%;
+  height: 200px;
+  background: white;
+  opacity: 1;
+}
