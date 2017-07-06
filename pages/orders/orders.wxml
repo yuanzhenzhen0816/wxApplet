@@ -5,12 +5,13 @@
   </view>
   <view class="row arrivedTime  padd borderB bg-gray">
     <text>送达时间</text>
-    <button class="btn month" bindtap="month">{{month}} 今天 ∨</button>
-    <button class="btn time">{{time}} ∨</button>
+    <view class="row">
+      <button class="btn month" wx:for="{{pickdata}}" wx:for-index="index" data-index="{{index}}"  bindtap="pickClick">{{item.title}}∨</button>
+    </view>
   </view>
   <view class="goodInfo  padd borderB bg-gray">
     <view class="row">
-      <image class="image-icon" src="{{image}}"></image>
+      <image class="image-commod" src="{{image}}"></image>
       <view class="column">
         <text>{{foodname}}</text>
         <text class="gray">{{haveCheckedProp}}</text>
@@ -20,9 +21,11 @@
         <text>× {{num}}</text>
       </view>
     </view>
-    
   </view>
+  
   <view class="margin-t padd remarks">
+  <p>备注：</p>
+  <p>  </p>
     <textarea class="border remarks-input" placeholder="如有特殊情况请留言，客服会视情况处理" />
   </view>
   <view class="row padd borderB bg-gray">
@@ -33,28 +36,18 @@
     <text>应付金额：<text class="red">￥{{total}}</text></text>
     <button class="goumai">立即购买</button>
   </view>
-  <view class="arrived">
-    <view class="white-bg"  wx:if="{{isShowm}}">
-      <view class = "row">
+  <view class="arrived" wx:if="{{isShow}}">
+    <view class="white-bg" >
+      <view class = "row pick-title padd">
         <view class="ok green" catchtap = "confirm">确定</view>
         <view class="cancel gray" catchtap = "hideMask">取消</view>
       </view>
       <picker-view bindchange="bindChange" class="pick"  indicator-style="height: 40px;" value="{{value}}" >
         <picker-view-column>
-          <view  wx:for="{{montndata}}" indicator-style="height: 40px;" class="monthClass" >{{item}}</view>
+          <view  wx:for="{{pickdata[curNav].timer}}" indicator-style="height: 40px;" class="monthClass" >{{item}}</view>
         </picker-view-column>
       </picker-view>
     </view>
-    <view wx:if="{{isshowt}}" class="white-bg">
-      <view class = "row">
-        <view class="ok green" catchtap = "confirm">确定</view>
-        <view class="cancel gray" catchtap = "hideMask">取消</view>
-      </view>
-      <picker-view indicator-style="height: 40px;" style="width: 100%; height: 200px;background: white;opacity: 1">
-        <picker-view-column>
-          <view wx:for="{{time}}" style="line-height: 40px; text-align: center">{{time[index]}}</view>
-        </picker-view-column>
-      </picker-view>
-    </view>
+    
   </view>
 </view>

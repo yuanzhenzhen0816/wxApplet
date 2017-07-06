@@ -28,7 +28,6 @@ Page({
   },
   postData: {},
   onLoad: function (options) {
-    var app="app";
     var that = this,
         item = detail.data,
         valuatecon = detail.foodevaluate;

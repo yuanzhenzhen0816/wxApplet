@@ -79,8 +79,8 @@
 
 .column {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
+  line-height: 20px;
 }
 
 .bg-gray {

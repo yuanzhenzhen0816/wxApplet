@@ -1,15 +1,39 @@
 var app = getApp();
 var common = require('../../utils/util.js');
-   var detail={ 
-    month :['7月05日','7月06日','7月07日'],
-    time:['8:00-9:00','9:00-10:00','10:00-11:00','11:00-12:00']
-   }
+
+const months=[],days=[],times=[],date = new Date(),curr = date.getMonth()+1;
+var th31=[1,3,5,7,8,10,12];
+for (var i = curr; i <= curr + 1;i++){
+  for (var j = 1; j < 31; j++) {
+    months.push(i + '月' + j + '日')
+  }
+}
+for (var i = 0; i < 31; i++) {
+  times.push(i+':00 - '+i+1+':00')
+}
+var detail = {
+  data: [
+    {
+      title: months[0],
+      timer: months
+    },
+    {
+      title: times[0],
+      timer: times
+    }
+  ],
+  months: [],
+  days: [],
+  times: [],
+};
+var pickdata = detail.data;
 Page({
   data: {
     month:'07月02日',
     time:'11:00-12:00',
+    curNav: "0",
     isShowm:0,
-    isshowt:0
+    pickdata: pickdata
   },
   onLoad:function(e){
     var foodname = e.foodname,
@@ -26,36 +50,39 @@ Page({
           haveCheckedProp: haveCheckedProp,
           total: total,
           image: image,
-          
         })
   },
-  bindChange: function (e) {
+ 
+  pickClick: function (e) {
     var that=this,
-        val = e.detail.value,
-        mon = detail.month
-    this.setData({
-      month: mon[val[0]]
+        index = e.currentTarget.dataset.index;
+    that.setData({
+      pickdata:that.data.pickdata,
+      curNav: index,
+      isShow:1
     })
   },
-  month:function(e){
-    var that = this;
+  bindChange:function(e){
+    var that=this;
+    const val = e.detail.value;
+    var index = that.data.curNav;
+    var pickIn = that.data.pickdata[index];
+    pickIn.title = pickIn.timer[val[0]]
     that.setData({
-      isShowm: 1,
-      isShowt:0,
-      montndata: detail.month,
+      pickdata: that.data.pickdata
     })
+    console.log(pickdata)
   },
   hideMask:function(){
     var that = this;
     that.setData({
-      isShowm: 0,
+      isShow: 0,
     })
   },
   confirm:function(e){
     var that=this;
     that.setData({
-      month:that.data.month,
-      isShowm: 0,
+      isShow: 0,
     })
   }
 })
