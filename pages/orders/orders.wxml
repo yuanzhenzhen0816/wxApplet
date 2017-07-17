@@ -1,7 +1,9 @@
 <view class="container">
   <view class="row consignee  padd borderB bg-gray">
     <text>收货人</text>
-    <button>添加收货地址</button>
+    
+      <navigator url="/pages/address/address" hover-class="navigator-hover"><button>添加收货地址</button> </navigator>
+    <!--</button>-->
   </view>
   <view class="row arrivedTime  padd borderB bg-gray">
     <text>送达时间</text>

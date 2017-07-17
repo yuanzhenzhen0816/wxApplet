@@ -1,3 +1,4 @@
+<import src="../../commpont/comm.wxml" />
 <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">    
     <block wx:for="{{item.swiperImg}}" wx:for-index="index">    
       <swiper-item>    
@@ -32,12 +33,10 @@
 <text class="detail-title">商品评价</text>
 <view class="padd">
   <text class=" red">综合评分{{valuatecon.score}}</text>
-  <view class="assess  borderB margin-t" wx:for="{{valuatecon.valuatecon}}"wx:for-index="index">
-    <span>{{item.username}}:{{item.iphone}}</span>
-    <text>{{item.evaluate}}</text>
-    <text>{{item.evaluatedate}}</text>
-  </view>
- 
+  <!-- 引用评论模板 以及拓展运算符...-->
+  <block wx:for="{{valuatecon.valuatecon}}" wx:for-item="item3">
+      <template is="comment" data="{{...item3}}" />
+  </block>
 </view>
  <view class="allassess detail-title bg-gray">查看所有472条评价</view>
 <text class="detail-title">图文详情</text>
@@ -67,7 +66,7 @@
   <view class="rowf">
    <text class="mt"> 总价：<text class="red">￥{{total}}</text></text>
     <button class="del ic" bindtap="del" data-num="{{num}}">-</button>
-    <input type="text"  value="{{num}}" />         
+    <input type="text" class="numinput"  value="{{num}}" />         
     <button class="add ic" bindtap="add" data-num="{{num}}">+</button>
    
   </view>

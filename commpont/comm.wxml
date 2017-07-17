@@ -1,0 +1,7 @@
+<template name="comment">
+  <view class="assess  borderB margin-t">
+    <span>{{username}}:{{iphone}}</span>
+    <text>{{evaluate}}</text>
+    <text>{{evaluatedate}}</text>
+  </view>
+</template>

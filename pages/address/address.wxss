@@ -1,0 +1,5 @@
+/* address.wxss */
+@import '../logs/logs.wxss';
+.commitOk{ border-radius: none; background: #ff0000; color: #fff; padding: 10px 0;}
+.closeEdite{padding: 10px 0; border: 1px solid #ff0000; color: #333}
+.inputaddre{width: 80%;}

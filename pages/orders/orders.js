@@ -9,7 +9,7 @@ for (var i = curr; i <= curr + 1;i++){
   }
 }
 for (var i = 0; i < 31; i++) {
-  times.push(i+':00 - '+i+1+':00')
+  times.push(i+':00 - '+(i+1)+':00')
 }
 var detail = {
   data: [
