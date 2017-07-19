@@ -22,4 +22,4 @@
 .cardetai{position: relative; z-index: 105;}
 .rowf{display: flex; justify-content: flex-start}
 .mt{margin-top: 5px;}
-.numinput{width: 30px;text-align: center}
+.numinput{width: 30px;text-align: center; margin-top: 5px;}

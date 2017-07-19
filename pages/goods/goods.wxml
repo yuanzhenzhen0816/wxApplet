@@ -48,7 +48,7 @@
 <view class="goodcar" wx:if="{{isshow}}">
  <span class="close h3" bindtap="close">×</span>
  <span class="rowf">
-  <image class="img-raduis" src="/images/1390444067_thumb.png"></image>
+  <image class="img-raduis" src="/images/f1.png"></image>
   
     <view class="column pad-left">
       <p class="h3">{{item.foodname}}</p>
