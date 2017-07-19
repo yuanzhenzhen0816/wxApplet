@@ -1,6 +1,6 @@
 var detail = {
   data: {
-    swiperImg: ['/images/icecream_kv.jpg', '/images/jzp_kv.jpg'],
+    swiperImg: ['/images/f1.png'],
     foodname: '雪菜肉丝面',
     foodprice: '15',
     foodpriceold: '22',

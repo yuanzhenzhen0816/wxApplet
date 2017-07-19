@@ -41,9 +41,9 @@
  <view class="allassess detail-title bg-gray">查看所有472条评价</view>
 <text class="detail-title">图文详情</text>
 <view class="deatil-img">
-  <image src="/images/20170329kv0.jpg"></image>
-  <image src="/images/jzp_kv.jpg"></image>
-  <image src="/images/icecream_kv.jpg"></image>
+  <image src="/images/k1.png"></image>
+  <image src="/images/k1.png"></image>
+  <image src="/images/k1.png"></image>
 </view>
 <view class="goodcar" wx:if="{{isshow}}">
  <span class="close h3" bindtap="close">×</span>

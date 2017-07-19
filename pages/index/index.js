@@ -3,20 +3,20 @@ var detail={
   data:[
     {
       title:'全部商品',
-      swiperImg: ['/images/icecream_kv.jpg','/images/jzp_kv.jpg'],
+      swiperImg: ['/images/k1.png','/images/k1.png'],
       foodList: [
-        { foodid: 1, url: '/images/1390444067_thumb.png', foodname: '雪菜肉丝面', foodprice: 15 },
-        { foodid: 2, url: '/images/1451358126_thumb.png', foodname: '御品红烧牛肉面', foodprice: 22 },
-        { foodid: 3, url: '/images/1490166919_thumb.png', foodname: '卤肉混沌面', foodprice: 18 },
-        { foodid: 3, url: '/images/1490166919_thumb.png', foodname: '卤肉混沌面', foodprice: 18 }
+        { foodid: 1, url: '/images/f1.png', foodname: '雪菜肉丝面', foodprice: 15 },
+        { foodid: 2, url: '/images/f1.png', foodname: '御品红烧牛肉面', foodprice: 22 },
+        { foodid: 3, url: '/images/f1.png', foodname: '卤肉混沌面', foodprice: 18 },
+        { foodid: 3, url: '/images/f1.png', foodname: '卤肉混沌面', foodprice: 18 }
       ],
     },
     {
       title:'热门促销',
-      swiperImg: ['/images/jzp_kv.jpg', '/images/icecream_kv.jpg'],
+      swiperImg: ['/images/k1.png', '/images/k1.png'],
       foodList: [
-        { foodid: 3, url: '/images/1490166919_thumb.png', foodname: '卤肉混沌面', foodprice: 18 },
-        { foodid: 3, url: '/images/1490166919_thumb.png', foodname: '卤肉混沌面', foodprice: 10 },
+        { foodid: 3, url: '/images/f1.png', foodname: '卤肉混沌面', foodprice: 18 },
+        { foodid: 3, url: '/images/f1.png', foodname: '卤肉混沌面', foodprice: 10 },
       ],
     },
   ]
