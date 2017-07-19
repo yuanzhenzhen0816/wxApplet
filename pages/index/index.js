@@ -2,17 +2,17 @@ var app = getApp();
 var detail={
   data:[
     {
-      title:'全部商品',
-      swiperImg: ['/images/k1.png','/images/k1.png'],
+      title:'全部小面',
+      swiperImg: ['/images/k1.png','/images/k2.png'],
       foodList: [
         { foodid: 1, url: '/images/f1.png', foodname: '雪菜肉丝面', foodprice: 15 },
-        { foodid: 2, url: '/images/f1.png', foodname: '御品红烧牛肉面', foodprice: 22 },
+        { foodid: 2, url: '/images/k2.png', foodname: '御品红烧牛肉面', foodprice: 22 },
         { foodid: 3, url: '/images/f1.png', foodname: '卤肉混沌面', foodprice: 18 },
         { foodid: 3, url: '/images/f1.png', foodname: '卤肉混沌面', foodprice: 18 }
       ],
     },
     {
-      title:'热门促销',
+      title:'招牌热销面',
       swiperImg: ['/images/k1.png', '/images/k1.png'],
       foodList: [
         { foodid: 3, url: '/images/f1.png', foodname: '卤肉混沌面', foodprice: 18 },
