@@ -1,24 +1,11 @@
 var app = getApp();
+var detailObj = require("../../utils/data.js");
 var detail={
   data:[
     {
-      title:'全部小面',
-      swiperImg: ['/images/k1.png','/images/k2.png'],
-      foodList: [
-        { foodid: 1, url: '/images/f1.png', foodname: '雪菜肉丝面', foodprice: 15 },
-        { foodid: 2, url: '/images/k2.png', foodname: '御品红烧牛肉面', foodprice: 22 },
-        { foodid: 3, url: '/images/f1.png', foodname: '卤肉混沌面', foodprice: 18 },
-        { foodid: 3, url: '/images/f1.png', foodname: '卤肉混沌面', foodprice: 18 }
-      ],
-    },
-    {
-      title:'招牌热销面',
-      swiperImg: ['/images/k1.png', '/images/k1.png'],
-      foodList: [
-        { foodid: 3, url: '/images/f1.png', foodname: '卤肉混沌面', foodprice: 18 },
-        { foodid: 3, url: '/images/f1.png', foodname: '卤肉混沌面', foodprice: 10 },
-      ],
-    },
+      swiperImg: ['/images/lunb.jpg','/images/lunb02.jpg'],
+      foodList: detailObj.detail.data,
+    }
   ]
 }
 Page({
@@ -47,15 +34,15 @@ Page({
       length: info.length
     })
   },
-  switchTab: function (e) {
-    var that = this,
-        index = e.currentTarget.dataset.index,
-        info = detail.data[index];
-    that.setData({
-      list: info,
-      curNav:index
-    })
-  },
+  // switchTab: function (e) {  //切换的tab 目前暂时关闭此入口
+  //   var that = this,
+  //       index = e.currentTarget.dataset.index,
+  //       info = detail.data[index];
+  //   that.setData({
+  //     list: info,
+  //     curNav:index
+  //   })
+  // },
   fooddetail: function (e) {
     wx.navigateTo({
       url: '../goods/goods?foodid=1',

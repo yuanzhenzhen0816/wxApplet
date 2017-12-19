@@ -15,11 +15,22 @@
 .deatil-img image{ width: 100%}
 .deatil-img{margin-bottom: 40px}
 .allassess{padding: 10px 0; text-align: center;}
-.buy{ width: 100%; position: fixed; bottom: 0; background:#ff0000; color: #fff;padding: 10px 0; text-align: center; z-index: 110;}
+
 .close{display: block; position: absolute; top: 0; right: 10px;}
-.goodcar{display: block; position: fixed; bottom: 40px; background: #fff; width: 100%; padding: 10px; z-index: 110; box-sizing: border-box}
+.goodcar{display: block; position: fixed; bottom: 40px; background: #fff; width: 100%; padding: 10px; z-index: 120; box-sizing: border-box}
 .meng{position: fixed;z-index: 100; width: 100%; height: 100%; background: #000; left: 0; top: 0; opacity: 0.5}
 .cardetai{position: relative; z-index: 105;}
-.rowf{display: flex; justify-content: flex-start}
+.rowf{display: flex; align-items:center}
 .mt{margin-top: 5px;}
 .numinput{width: 30px;text-align: center; margin-top: 5px;}
+.bottombar{border-top: 1px solid #ccc; display: flex; background: #fff; width: 100%; height:40px; position: fixed; bottom: 0;color: #fff;text-align: center; z-index: 110;}
+.bottombar view{line-height: 40px;  vertical-align:middle;float: left; border-left: 1px solid #ccc; box-sizing: border-box;}
+.bottombar view.addcar{background: #1cb11d;}
+.bottombar view.buy{background: #f1490e;}
+.bottombar view image{vertical-align: middle;}
+.bottombar view:nth-child(1){border-left: none}
+.bottombar view:nth-child(1),.bottombar view:nth-child(2){width: 15%; color: #333}
+.bottombar view:nth-child(3),.bottombar view:nth-child(4){width: 35%}
+.addok{width: 100%; height: 40px;line-height: 40px; position: fixed; color: #fff; text-align: center; bottom: 0; left: 0; background: #f23e19; padding: none}
+button.del{ background: #ccc; border-top-right-radius: none; border-bottom-right-radius: none}
+button {border-radius: none}

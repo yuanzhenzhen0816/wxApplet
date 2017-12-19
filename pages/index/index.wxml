@@ -4,11 +4,12 @@
     <image src="/images/location.png" class="locaImg"/>
     <span>当前位置：</span>{{city}}
   </view>
-  <view class="header-wapper">
+  <!--切换的tab按钮  -->
+  <!-- <view class="header-wapper">
     <view wx:for="{{product}}" bindtap="switchTab" wx:for-index="index" data-index="{{index}}">
       <text class="text-detail {{curNav == index ? 'active' : ''}}">{{item.title}}</text>
     </view>
-  </view>
+  </view> -->
   <block wx:if="{{list.foodList == null}}">
     <view class="wait-more">敬请期待...</view>
   </block>
@@ -28,9 +29,7 @@
           <span data-id="{{item.foodid}}">
             <image class="goods-images" src="{{item.url}}" ></image>
               <p>{{item.foodname}}</p>
-              <p>￥{{item.foodprice}}<span><svg class="icon" aria-hidden="true">
-    <use xlink:href="#icon-xxx"></use>
-</svg></span></p>
+              <p>￥{{item.foodprice}}  <span class='oldprice'>原价:￥{{item.oldprice}}</span></p>
             </span>
         </li>
       </ul>

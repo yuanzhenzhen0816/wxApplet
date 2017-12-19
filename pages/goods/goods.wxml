@@ -12,7 +12,7 @@
   <text class="h5 gray">{{item.foodintroduce}}</text>
 </view>
 <view class="padd borderB">
-  <text class="h3 red">￥{{item.foodprice}}</text><text class="h5 dur gray">￥{{item.foodpriceold}}</text>
+  <text class="h3 red">￥{{item.foodprice}}</text><text class="h5 dur gray">￥{{item.oldprice}}</text>
 </view>
 <view class="service row gray h5 padd borderB">
   <ul>
@@ -22,10 +22,10 @@
     <li>不支持7天无理由退换</li>
   </ul>
 </view>
-<view class="row padd borderB bg-gray" bindtap="specifications">
+ <!-- <view class="row padd borderB bg-gray" > 
   <span>已选默认规格</span>
   <image class="image-icon" src="/images/jiant.png"></image>
-</view>
+</view> -->
 <view class="column padd">
   <text class="red">林妈妈手擀面</text>
   <text class="gray">北京老字号著名面食连锁品牌</text>
@@ -41,9 +41,9 @@
  <view class="allassess detail-title bg-gray">查看所有472条评价</view>
 <text class="detail-title">图文详情</text>
 <view class="deatil-img">
-  <image src="/images/k1.png"></image>
-  <image src="/images/k1.png"></image>
-  <image src="/images/k1.png"></image>
+  <image src="/images/lunb.jpg"></image>
+  <image src="/images/lunb02.jpg"></image>
+  <image src="/images/lunb.jpg"></image>
 </view>
 <view class="goodcar" wx:if="{{isshow}}">
  <span class="close h3" bindtap="close">×</span>
@@ -52,28 +52,41 @@
   
     <view class="column pad-left">
       <p class="h3">{{item.foodname}}</p>
-      <p class="h5 red">￥{{havePrice}}</p>
-      <p class="h5 gray">已选择：{{haveCheckedProp}}</p>
+      <p class="h5 red">￥{{havePrice}} <span class='gray'>已选择：{{haveCheckedProp}}</span></p>
     </view>
   </span> 
   <view  class="rowf"  wx:for="{{item.property}}" wx:for-item="item">
     <view class="classname">{{item.name}}</view>
-    <!--<button data-name="{{item.size}}" data-property="{{per.code}}" data-value="{{per.name}}" data-price="{{per.p}}"  bindtap="getChecked" wx:for="{{item.size}}" wx:for-item="per" class="{{per.name == postData[per.code]? 'active' : ''}}">{{per.name}}</button>-->
    <button data-size="{{item.size}}" data-code="{{per.code}}" data-name="{{per.name}}" data-price="{{per.price}}"  bindtap="getChecked" wx:for="{{item.size}}" wx:for-item="per" class="{{per.name == postData.name? 'active' : ''}}">{{per.name}}</button>
   </view>
-    
+  <view class="rowf numbtn">
   <text class="h5">购买数量</text>
-  <view class="rowf">
-   <text class="mt"> 总价：<text class="red">￥{{total}}</text></text>
     <button class="del ic" bindtap="del" data-num="{{num}}">-</button>
     <input type="text" class="numinput"  value="{{num}}" />         
     <button class="add ic" bindtap="add" data-num="{{num}}">+</button>
+  </view>
+  
+  <view class="rowf">
+   <text class="mt"> 总价：<text class="red">￥{{total}}</text></text>
+    
    
   </view>
+  <view class='addok' bindtap='addok'>确定</view>
+</view>
+<view class='bottombar'>
+  <view class="car" bindtap="car">
+    <image src='../../images/car.png' style="width:25px; height:25px"></image>
+  </view>
+  <view class="like" bindtap="like">
+    收藏
+  </view>
+  <view class="addcar" bindtap="addcar">
+    加入购物车
+  </view>
+  <view class="buy" bindtap="buy">
+    立即订购
+  </view>
+</view>
 
-</view>
-<view class="buy" bindtap="buy">
- 立即订购
-</view>
 <view class="meng" wx:if="{{isshow}}"></view>
 </view>

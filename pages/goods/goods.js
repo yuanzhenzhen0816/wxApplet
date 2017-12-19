@@ -8,12 +8,13 @@ Page({
     havePrice: '',
     total: '',
     haveCheckedProp: '',
+    foodList: detailObj.detail.data
   },
   postData: {},
   onLoad: function (options) {
     var that = this,
-      item = detailObj.detail.data,
-      valuatecon = detailObj.detail.foodevaluate;
+      item = detailObj.detail.data[0],
+      valuatecon = detailObj.detail.data[0].foodevaluate;
     item.property = item.standard;
     var defultprice = item.property[0].size[0].price,
         defultname = item.property[0].size[0].name,
@@ -113,10 +114,18 @@ Page({
       duration: e.detail.value
     })
   },
-  specifications: function () {
+  addcar: function () {
     this.setData({
       isshow: true
     })
+  },
+  addok:function(){
+    wx.showToast({
+      title: '添加成功',
+      icon:'success',
+      duration:2000
+    },2000);
+    this.close()
   },
   //立即订购
   buy: function () {
