@@ -5,7 +5,8 @@
     "pages/my/my",
     "pages/orders/orders",
     "pages/goods/goods",
-    "pages/address/address"
+    "pages/address/address",
+    "pages/car/car"
   ],
   "window": {
     "navigationBarBackgroundColor": "#fff",
@@ -15,20 +16,26 @@
     "backgroundTextStyle": "dark"
   },
   "tabBar": {
-    "selectedColor": "#660000",
-    "color": "#333",
+    "selectedColor": "#d4237a",
+    "color": "#8a8a8a",
     "list": [
       {
         "pagePath": "pages/index/index",
         "iconPath": "/images/home.png",
         "selectedIconPath": "/images/homeCheck.png",
-        "text": "首页"
+        "text": "垂流三尺"
+      },
+      {
+        "pagePath": "pages/car/car",
+        "iconPath": "/images/car.png",
+        "selectedIconPath": "/images/carCheck.png",
+        "text": "购物车"
       },
       {
         "pagePath": "pages/my/my",
         "iconPath": "/images/my.png",
         "selectedIconPath": "/images/myCheck.png",
-        "text": "我的"
+        "text": "我"
       }
     ]
   },

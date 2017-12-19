@@ -28,7 +28,9 @@
           <span data-id="{{item.foodid}}">
             <image class="goods-images" src="{{item.url}}" ></image>
               <p>{{item.foodname}}</p>
-              <p>￥{{item.foodprice}}</p>
+              <p>￥{{item.foodprice}}<span><svg class="icon" aria-hidden="true">
+    <use xlink:href="#icon-xxx"></use>
+</svg></span></p>
             </span>
         </li>
       </ul>

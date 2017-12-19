@@ -93,7 +93,6 @@ Page({
       },
       success: function (res) {
         // success  
-        console.log(res);
         var city = res.data.result.address;
         page.setData({ city: city });
       },
