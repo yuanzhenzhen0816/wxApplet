@@ -6,6 +6,7 @@
 .container {
   font-size: 9pt;
   font-family: "微软雅黑";
+  letter-spacing:1px
 }
 
 .log-list {
@@ -91,12 +92,6 @@
   display: block;
 }
 
-.img-raduis {
-  width: 100rpx;
-  height: 100rpx;
-  border-radius: 50%;
-  border: 1px solid #f00;
-}
 
 button {
   position: relative;
@@ -105,8 +100,9 @@ button {
   line-height: 12px;
   font-size: 12px;
   margin: 5px;
+  border-radius: 0px
 }
-
+input{height: auto;}
 .active {
   border: 1px solid #f00;
 }
@@ -122,3 +118,5 @@ button {
 .border {
   border: 1px solid #e3e3e3;
 }
+button::after {border: none}
+button{border: 1px solid #ccc}

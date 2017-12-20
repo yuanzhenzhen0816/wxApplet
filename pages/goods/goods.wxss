@@ -8,6 +8,13 @@
   width: 100%;
 }
 
+.img-raduis {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #e8e8e8;
+  position: absolute; left: 10px; top: -15px;
+}
+.detail-head{ padding-left: 60px;}
 
 .detail-title{display: flex; justify-content: center;  background: #fbfbfb; padding: 10px 0; margin: 10px 0; border-top: 1px solid #e3e3e3; border-bottom: 1px solid #e3e3e3}
 .service ul li{margin: 10px 1px;}
@@ -16,21 +23,26 @@
 .deatil-img{margin-bottom: 40px}
 .allassess{padding: 10px 0; text-align: center;}
 
-.close{display: block; position: absolute; top: 0; right: 10px;}
+.close{display: block; position: absolute; top:0; right: 0;}
 .goodcar{display: block; position: fixed; bottom: 40px; background: #fff; width: 100%; padding: 10px; z-index: 120; box-sizing: border-box}
 .meng{position: fixed;z-index: 100; width: 100%; height: 100%; background: #000; left: 0; top: 0; opacity: 0.5}
 .cardetai{position: relative; z-index: 105;}
-.rowf{display: flex; align-items:center}
+.rowf{display: flex; align-items:center; padding: 5px 0}
 .mt{margin-top: 5px;}
-.numinput{width: 30px;text-align: center; margin-top: 5px;}
-.bottombar{border-top: 1px solid #ccc; display: flex; background: #fff; width: 100%; height:40px; position: fixed; bottom: 0;color: #fff;text-align: center; z-index: 110;}
-.bottombar view{line-height: 40px;  vertical-align:middle;float: left; border-left: 1px solid #ccc; box-sizing: border-box;}
-.bottombar view.addcar{background: #1cb11d;}
+
+.bottombar{border-top: 1px solid #e6e6e6; display: flex; background: #fff; width: 100%; height:40px; position: fixed; bottom: 0;color: #fff;text-align: center; z-index: 110;}
+.bottombar view{line-height: 40px;  vertical-align:middle;float: left;box-sizing: border-box;}
+.bottombar view.addcar{background: #f79f1d;}
 .bottombar view.buy{background: #f1490e;}
 .bottombar view image{vertical-align: middle;}
-.bottombar view:nth-child(1){border-left: none}
+.bottombar view:nth-child(1){border-right: 1px solid #e8e8e8}
 .bottombar view:nth-child(1),.bottombar view:nth-child(2){width: 15%; color: #333}
 .bottombar view:nth-child(3),.bottombar view:nth-child(4){width: 35%}
 .addok{width: 100%; height: 40px;line-height: 40px; position: fixed; color: #fff; text-align: center; bottom: 0; left: 0; background: #f23e19; padding: none}
-button.del{ background: #ccc; border-top-right-radius: none; border-bottom-right-radius: none}
-button {border-radius: none}
+button.del,button.add,.numinput{min-height: 0; background: #e8e8e8; border: none; border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8; margin: 0;width:30px; line-height: 12px;}
+.numinput{width: 35px; text-align: center}
+.rowf text.h5{ width: 48px; text-align: right; padding-right: 3px;}
+.numbtn .del{border: 1px solid #d8d8d8; border-top-left-radius: 3px; border-bottom-left-radius: 3px}
+.numbtn .add{border: 1px solid #d8d8d8; border-top-right-radius: 3px; border-bottom-right-radius: 3px}
+.numbtn .numinput{border-top: 1px solid #d8d8d8; border-bottom: 1px solid #d8d8d8;}
+button[data-code='cm']{margin-left: 0; border-radius: 4px}

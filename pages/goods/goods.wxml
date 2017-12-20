@@ -46,17 +46,17 @@
   <image src="/images/lunb.jpg"></image>
 </view>
 <view class="goodcar" wx:if="{{isshow}}">
- <span class="close h3" bindtap="close">×</span>
+ <span class="close h3" bindtap="close"><image src='../../images/delete.png' style="width:20px; height:20px"></image></span>
  <span class="rowf">
   <image class="img-raduis" src="/images/f1.png"></image>
   
-    <view class="column pad-left">
+    <view class="column pad-left detail-head">
       <p class="h3">{{item.foodname}}</p>
       <p class="h5 red">￥{{havePrice}} <span class='gray'>已选择：{{haveCheckedProp}}</span></p>
     </view>
   </span> 
   <view  class="rowf"  wx:for="{{item.property}}" wx:for-item="item">
-    <view class="classname">{{item.name}}</view>
+    <text class="h5">{{item.name}}</text>
    <button data-size="{{item.size}}" data-code="{{per.code}}" data-name="{{per.name}}" data-price="{{per.price}}"  bindtap="getChecked" wx:for="{{item.size}}" wx:for-item="per" class="{{per.name == postData.name? 'active' : ''}}">{{per.name}}</button>
   </view>
   <view class="rowf numbtn">
@@ -67,7 +67,7 @@
   </view>
   
   <view class="rowf">
-   <text class="mt"> 总价：<text class="red">￥{{total}}</text></text>
+   <text class="h5"> 总价</text><text class="red">￥{{total}}</text>
     
    
   </view>
@@ -78,7 +78,7 @@
     <image src='../../images/car.png' style="width:25px; height:25px"></image>
   </view>
   <view class="like" bindtap="like">
-    收藏
+    <image src='../../images/like.png' style="width:25px; height:25px"></image>
   </view>
   <view class="addcar" bindtap="addcar">
     加入购物车

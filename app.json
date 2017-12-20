@@ -23,7 +23,7 @@
         "pagePath": "pages/index/index",
         "iconPath": "/images/home.png",
         "selectedIconPath": "/images/homeCheck.png",
-        "text": "垂流三尺"
+        "text": "小店铺"
       },
       {
         "pagePath": "pages/car/car",
@@ -35,7 +35,7 @@
         "pagePath": "pages/my/my",
         "iconPath": "/images/my.png",
         "selectedIconPath": "/images/myCheck.png",
-        "text": "我"
+        "text": "我的"
       }
     ]
   },
